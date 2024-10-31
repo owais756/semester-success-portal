@@ -1,0 +1,164 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  background: linear-gradient(to bottom, #87CEEB, #F7DC6F) no-repeat center/cover;
+}
+
+.banner-video, .card {
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  background-color: #8e24aa;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1, header h2 {
+  margin-bottom: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.about h2 {
+  color: #007BFF;
+  border-bottom: 2px solid #007BFF;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.about ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.about li {
+  margin-bottom: 10px;
+}
+
+.developer-info {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.developer-photo {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.developer-details {
+  max-width: 650px;
+}
+
+.card {
+  width: 250px;
+  height: 150px;
+  background-color: #fff;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+  margin-bottom: 1px;
+}
+
+.card p {
+  font-size: 14px;
+}
+
+.card button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.card:hover button {
+  background-color: #0056b3;
+}
+
+section {
+  padding: 2rem;
+  margin: 1rem;
+}
+
+/* In styles.css */
+.justify-text {
+  text-align: justify;
+}
+
+    /* Container to hold the sliding text */
+    .sliding-text-container {
+      overflow: hidden;
+      white-space: nowrap;
+      background: #0D0D0D;
+      color: #00FFAB;
+      font-size: 20px;
+      width: 100%;
+    }
+
+    /* Sliding text animation */
+    .sliding-text {
+      display: inline-block;
+      padding-left: 100%;
+      animation: slide 15s linear infinite;
+    }
+
+    /* Keyframes for sliding effect */
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+footer {
+  background-color: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
