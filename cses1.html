@@ -43,27 +43,5 @@
     <footer>
         <p>&copy; Created by MOHAMMED OWAIS. All rights reserved.</p>
     </footer>
-    
-    <script>
-        const url = 'notes/_Evs unit 1-5 notes.pdf';
-        
-        pdfjsLib.getDocument(url).promise.then(pdf => {
-            pdf.getPage(1).then(page => {
-                const viewport = page.getViewport({ scale: 1 });
-                const canvas = document.getElementById('pdf-canvas');
-                const context = canvas.getContext('2d');
-                canvas.width = viewport.width;
-                canvas.height = viewport.height;
-
-                const renderContext = {
-                    canvasContext: context,
-                    viewport: viewport,
-                };
-                page.render(renderContext);
-            });
-        }).catch(error => {
-            console.error('Error loading PDF:', error);
-        });
-    </script>
 </body>
 </html>
