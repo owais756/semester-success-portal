@@ -30,7 +30,23 @@
     </video>
   </div>
 
-  <div class="centered-text">
+<div id="visitor-counter" style="text-align: center; margin-top: 20px;">
+    <p>Total Visitors: <span id="counter-value">Loading...</span></p>
+</div>
+<style>
+  #visitor-counter {
+      font-family: Arial, sans-serif;
+      color: #333;
+      font-size: 1.5rem;
+      margin-top: 20px;
+  }
+  #counter-value {
+      font-weight: bold;
+      color: #0078D7;
+  }
+</style>
+
+<div class="centered-text">
     Finding notes is now simpler than ever. Your all-in-one destination for everything you need to ace your exams.
 
     <style> 
@@ -58,6 +74,18 @@
         </div>
     </div>
   </main>
-  <script src="script.js"></script>
+<script>
+    // Use CountAPI to fetch the visitor count
+    fetch('https://api.countapi.xyz/hit/semester-success-portal/visitors')
+        .then(response => response.json())
+        .then(data => {
+            // Display the visitor count
+            document.getElementById('counter-value').innerText = data.value;
+        })
+        .catch(error => {
+            console.error('Error fetching visitor count:', error);
+            document.getElementById('counter-value').innerText = 'Error';
+        });
+</script>
 </body>
 </html>
